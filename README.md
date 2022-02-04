@@ -8,6 +8,7 @@
 >> 4.2. Shows a red dot if any unseen message found.
 # Download
 ## <a href="https://github.com/dev-zarir/Messenger-For-PC/releases/download/msnger-v1.3/Messenger.exe">Download For Windows</a>
+## <a href="https://github.com/dev-zarir/Messenger-For-PC/releases/download/msnger-v1.3-linux/Messenger.tar.gz">Download For Linux</a>
 # Screenshots
 !['Screenshots/ss1.png'](Screenshots/ss1.png)
 <br>
