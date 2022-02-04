@@ -7,7 +7,7 @@ from time import sleep
 import sys
 import os
 
-dirpath=os.path.dirname(os.path.abspath(__file__))
+dirpath=os.path.dirname(os.path.abspath(__file__)).replace('\\','/')
 js="function check(){elem=document.getElementsByClassName('is6700om');if(elem.length!=0){return 'Found'}else{return 'Not Found'}};check()"
 
 class Check_Notification(QObject):
@@ -30,7 +30,7 @@ class Main(QtWidgets.QWidget):
 		self.staytop=False
 		self.ispop=False
 		self.setWindowFlags(Qt.FramelessWindowHint)
-		QtGui.QFontDatabase.addApplicationFont(dirpath+"\\Resourse\\icons.ttf")
+		QtGui.QFontDatabase.addApplicationFont(dirpath+"/Resource/icons.ttf")
 		# ================================================================
 		self.resize(400, 500)
 		self.setMinimumSize(QtCore.QSize(410, 400))
@@ -50,9 +50,9 @@ class Main(QtWidgets.QWidget):
 		self.windowicon = QtWidgets.QPushButton(self.titlebar)
 		self.windowicon.setMaximumSize(QtCore.QSize(20, 20))
 		self.icon1 = QtGui.QIcon()
-		self.icon1.addPixmap(QtGui.QPixmap(dirpath+"\\Resourse\\msnger.png"))
+		self.icon1.addPixmap(QtGui.QPixmap(dirpath+"/Resource/msnger.png"))
 		self.icon2 = QtGui.QIcon()
-		self.icon2.addPixmap(QtGui.QPixmap(dirpath+"\\Resourse\\msngernotify.png"))
+		self.icon2.addPixmap(QtGui.QPixmap(dirpath+"/Resource/msngernotify.png"))
 		self.windowicon.setIcon(self.icon1)
 		self.setWindowIcon(self.icon1)
 		self.windowicon.setIconSize(QtCore.QSize(20, 20))
@@ -303,9 +303,9 @@ class PopUp(QtWidgets.QWidget):
 		self.btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
 		self.btn.setStyleSheet("QPushButton{background: transparent;border - radius: 25px;}")
 		self.icon1 = QtGui.QIcon()
-		self.icon1.addPixmap(QtGui.QPixmap(dirpath+"\\Resourse\\msnger.png"))
+		self.icon1.addPixmap(QtGui.QPixmap(dirpath+"/Resource/msnger.png"))
 		self.icon2 = QtGui.QIcon()
-		self.icon2.addPixmap(QtGui.QPixmap(dirpath+"\\Resourse\\msngernotify.png"))
+		self.icon2.addPixmap(QtGui.QPixmap(dirpath+"/Resource/msngernotify.png"))
 		self.btn.setIcon(self.icon1)
 		self.btn.setIconSize(QSize(self.size, self.size))
 		self.btn.setObjectName("btn")
